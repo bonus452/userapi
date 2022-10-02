@@ -43,7 +43,7 @@ class UserController extends Controller
             Log::error($exception);
             return response()
                 ->json(['errors' => [ __('api.user_not_created') ]])
-                ->setStatusCode(400);
+                ->setStatusCode(500);
         }
 
     }
